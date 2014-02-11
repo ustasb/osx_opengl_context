@@ -4,6 +4,10 @@
 
 namespace {
 
+// OpenGL 4.1
+const int OPENGL_MAJOR_VERSION = 4;
+const int OPENGL_MINOR_VERSION = 1;
+
 const int WINDOW_WIDTH = 640;
 const int WINDOW_HEIGHT = 480;
 
@@ -21,8 +25,8 @@ int main() {
     exit(EXIT_FAILURE);
   }
 
-  glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
-  glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, OPENGL_MAJOR_VERSION);
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, OPENGL_MINOR_VERSION);
   glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
   glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
